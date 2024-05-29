@@ -1,4 +1,4 @@
-# Google API Data Pipeline Project
+# :arrows_counterclockwise: Google API Data Pipeline Project
 
 ## Introduction
 
