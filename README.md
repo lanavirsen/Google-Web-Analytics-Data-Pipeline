@@ -3,7 +3,7 @@
 ## Introduction
 
 ### Objective
-The aim of this project was to automate the monthly collection, transformation, and presentation of web analytics data from Google Analytics 4 and Google Search Console into a Google Sheet. This automation streamlines the process of monitoring and reporting key performance metrics, facilitating easier analysis and access to data.
+The aim of this project was to automate the monthly collection, transformation, and presentation of web analytics data from Google Analytics 4 and Google Search Console into a Google Sheet for the non-profit organization Ideell marknadsföring i Sverige, where I volunteer as a Data Analyst and Data Team Coordinator. This automation streamlines the process of monitoring and reporting key performance metrics, facilitating easier analysis and access to data for our data team.
 
 ### Tools and technologies used
 - **Python**: For scripting the data collection and transformation processes.
