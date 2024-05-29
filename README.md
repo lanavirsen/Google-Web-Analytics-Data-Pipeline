@@ -23,10 +23,7 @@ The aim of this project was to automate the monthly collection, transformation, 
 
 ## Steps done
 ### Table of contents
-1. [Google Analytics 4 - Google Sheets pipeline](#google-analytics-4---google-sheets-pipeline)
-    1. [Setting up a Google Cloud Project](#setting-up-a-google-cloud-project)
-    2. [Enabling the required APIs for GA4 and Google Sheets](#enabling-the-required-apis-for-ga4-and-google-sheets)
-    3. [Creating credentials](#creating-credentials)
+[1. Google Analytics 4 - Google Sheets pipeline](#1.-google-analytics-4---google-sheets-pipeline)
 
 ### 1. Google Analytics 4 - Google Sheets pipeline
 
