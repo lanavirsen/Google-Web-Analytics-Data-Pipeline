@@ -23,7 +23,7 @@ The aim of this project was to automate the monthly collection, transformation, 
 
 ## Steps done
 ### Table of contents
-[1. Google Analytics 4 - Google Sheets pipeline](#1.-google-analytics-4---google-sheets-pipeline)
+[1. Google Analytics 4 - Google Sheets pipeline](#1-google-analytics-4---google-sheets-pipeline)
 
 ### 1. Google Analytics 4 - Google Sheets pipeline
 
