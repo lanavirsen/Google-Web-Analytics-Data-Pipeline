@@ -21,6 +21,10 @@ The aim of this project was to automate the monthly collection, transformation, 
 - Data cleaning, transformation, and preparation
 - Automating and scheduling Python scripts
 
+## Data flow diagram
+
+![Diagram](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/diagram.png)
+
 ## Table of contents
 - [1. Google Analytics 4 - Google Sheets pipeline](#1-google-analytics-4---google-sheets-pipeline)
     - [1.1. Setting up a Google Cloud Project](#11-setting-up-a-google-cloud-project)
