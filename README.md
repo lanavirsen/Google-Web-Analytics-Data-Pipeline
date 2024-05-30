@@ -23,8 +23,24 @@ The aim of this project was to automate the monthly collection, transformation, 
 
 ## Steps done
 ### Table of contents
-1. [Google Analytics 4 - Google Sheets pipeline](#1-google-analytics-4---google-sheets-pipeline)
-    1. [Setting up a Google Cloud Project](#11-setting-up-a-google-cloud-project)
+- [1. Google Analytics 4 - Google Sheets pipeline](#1-google-analytics-4---google-sheets-pipeline)
+    - [1.1. Setting up a Google Cloud Project](#11-setting-up-a-google-cloud-project)
+    - [1.2. Enabling the required APIs for GA4 and Google Sheets](#12-enabling-the-required-apis-for-ga4-and-google-sheets)
+    - [1.3. Creating credentials](#13-creating-credentials)
+    - [1.4. Setting permissions](#14-setting-permissions)
+    - [1.5. Installing client libraries](#15-installing-client-libraries)
+    - [1.6. Writing code to access GA4 data and write it to Google Sheet](#16-writing-code-to-access-ga4-data-and-write-it-to-google-sheet)
+- [2. Adding Google Search Console to the existing pipeline](#2-adding-google-search-console-to-the-existing-pipeline)
+    - [2.1. Enabling Google Search Console API](#21-enabling-google-search-console-api)
+    - [2.2. Setting permissions](#22-setting-permissions)
+    - [2.3. Installing the client library](#23-installing-the-client-library)
+    - [2.4. Adjusting code to add Google Search Console data to the pipeline](#24-adjusting-code-to-add-google-search-console-data-to-the-pipeline)
+- [3. Saving the code as a .py script](#3-saving-the-code-as-a-py-script)
+- [4. Setting up logging](#4-setting-up-logging)
+- [5. Scheduling](#5-scheduling)
+    - [5.1. Creating a new task in Task Scheduler](#51-creating-a-new-task-in-task-scheduler)
+    - [5.2. Configuring the task](#52-configuring-the-task)
+
 
 ### 1. Google Analytics 4 - Google Sheets pipeline
 
@@ -164,7 +180,7 @@ month_and_year = (
 )
 ```
 
-#### Defining the functions to fetch and write data
+**Defining the functions to fetch and write data**
 
 I started with just a few GA4 metrics to test the pipeline:
 
@@ -463,7 +479,7 @@ if __name__ == '__main__':
     main()
 ```
 
-### 4. Logging
+### 4. Setting up logging
 
 For a script that's being run automatically, adding logging is a practical way to track its execution and troubleshoot any issues that might arise. For that, I used Python's built-in `logging` library.
 
