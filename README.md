@@ -20,7 +20,7 @@ You can access the complete Python script for the project [here](https://github.
 
 ### Skills demonstrated
 - Utilizing cloud-based APIs for data integration
-- Data cleaning, transformation, and preparation
+- Data transformation and preparation
 - Automating and scheduling Python scripts
 
 ## Data flow diagram
