@@ -48,25 +48,25 @@ The aim of this project was to automate the monthly collection, transformation, 
 
 I accessed the Google Cloud Console and initiated the creation of a new project.
 
-![Screenshot 1](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/1_New_GC_Project.png)
+![Screenshot 1](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/1_New_GC_Project.png)
 
 #### 1.2. Enabling the required APIs for GA4 and Google Sheets
 
 I navigated to the "APIs & Services > Library" section in the Google Cloud Console, searched for the Google Analytics Data API and Google Sheets API, and enabled them.
 
-![Screenshot 2](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/2_GA_Data_API.png)
+![Screenshot 2](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/2_GA_Data_API.png)
 
-![Screenshot 3](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/3_Sheets_API.png)
+![Screenshot 3](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/3_Sheets_API.png)
 
 #### 1.3. Creating credentials
 
 First, I navigated to "IAM & Admin > Service Accounts" to create a service account in the Google Cloud project.
 
-![Screenshot 4](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/4_Create_Service_Account.png)
+![Screenshot 4](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/4_Create_Service_Account.png)
 
 Next, I generated and downloaded a JSON key file for my service account. This key is used to authenticate my script with Google APIs.
 
-![Screenshot 5](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/5_Create_Key.png)
+![Screenshot 5](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/5_Create_Key.png)
 
 Initially, the attempt to create the keys raised an error due to insufficient permissions.
 
@@ -86,7 +86,7 @@ To write a Python script to automate data fetching from GA4 and writing to Googl
 pip install google-auth google-analytics-data gspread
 ```
 
-![Screenshot 6](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/6_pip.png)
+![Screenshot 6](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/6_pip.png)
 
 #### 1.6. Writing code to access GA4 data and write it to Google Sheet
 
@@ -301,7 +301,7 @@ formatted_avg_engagement_time = f"{minutes}:{seconds:02}"
 
 In the Google Cloud Console, I selected my project and enabled the Google Search Console API in the  "APIs & Services > Library" section.
 
-![Screenshot 7](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/7_GSC_API.png)
+![Screenshot 7](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/7_GSC_API.png)
 
 #### 2.2. Setting permissions
 
@@ -315,7 +315,7 @@ I installed the necessary library:
 pip install google-api-python-client
 ```
 
-![Screenshot 8](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/8_pip.png)
+![Screenshot 8](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/8_pip.png)
 
 #### 2.4. Adjusting code to add Google Search Console data to the pipeline
 
@@ -663,14 +663,14 @@ I use a Windows system, so I utilized the built-in Task Scheduler to automate th
 
 I opened Task Scheduler and initiated the creation of a new task.
 
-![Screenshot 9](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/9_Task_Scheduler.png)
+![Screenshot 9](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/9_Task_Scheduler.png)
 
 #### 5.2. Configuring the task
 **General tab**
 
 I named the task "Monthly IMIS Data Fetching" and adjusted the security options as needed.
 
-![Screenshot 10](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/10_Create_Task.png)
+![Screenshot 10](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/10_Create_Task.png)
 
 **Triggers tab**
 
@@ -678,9 +678,9 @@ I clicked on "New…" to set a new trigger.
 
 For "Begin the task", I selected "On a schedule", and for "Settings", I chose "Monthly". For "Months", I selected all months, and for "Days", I selected "3" to set the task to run on the 3rd day of each month.
 
-![Screenshot 11](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/11_New_Trigger.png)
+![Screenshot 11](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/11_New_Trigger.png)
 
-![Screenshot 12](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/12_triggers.png)
+![Screenshot 12](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/12_triggers.png)
 
 **Actions tab**
 
@@ -688,19 +688,19 @@ I clicked on "New…" to define the action the task should perform.
 
 For "Action", I chose "Start a program" and provided the paths for the three required fields: the path to the Python executable, the path to my script, and the path to the folder containing the script.
 
-![Screenshot 13](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/13_New_Action.png)
+![Screenshot 13](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/13_New_Action.png)
 
 **Conditions tab**
 
 I then adjusted the settings in the Conditions tab as required.
 
-![Screenshot 14](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/14_Conditions.png)
+![Screenshot 14](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/14_Conditions.png)
 
 **Settings tab**
 
 Finally, I adjusted the setting in the Setting tab.
 
-![Screenshot 15](https://github.com/lanavirsen/Google-API-Data-Pipeline/blob/main/images/15_Settings.png)
+![Screenshot 15](https://github.com/lanavirsen/Google-Web-Analytics-Data-Pipeline/blob/main/images/15_Settings.png)
 
 **Saving and testing**
 
