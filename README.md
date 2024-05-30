@@ -1,4 +1,4 @@
-# :arrows_counterclockwise: Google API Data Pipeline Project
+# :arrows_counterclockwise: Google Web Analytics Data Pipeline Project
 
 ## Overview
 
