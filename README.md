@@ -1,6 +1,6 @@
 # :arrows_counterclockwise: Google API Data Pipeline Project
 
-## Introduction
+## Overview
 
 ### Objective
 The aim of this project was to automate the monthly collection, transformation, and presentation of web analytics data from Google Analytics 4 and Google Search Console into a Google Sheet for the non-profit organization Ideell marknadsföring i Sverige, where I volunteer as a Data Analyst and Data Team Coordinator. This automation streamlines the process of monitoring and reporting key performance metrics, facilitating easier analysis and access to data for our data team.
@@ -21,8 +21,7 @@ The aim of this project was to automate the monthly collection, transformation, 
 - Data cleaning, transformation, and preparation
 - Automating and scheduling Python scripts
 
-## Steps done
-### Table of contents
+## Table of contents
 - [1. Google Analytics 4 - Google Sheets pipeline](#1-google-analytics-4---google-sheets-pipeline)
     - [1.1. Setting up a Google Cloud Project](#11-setting-up-a-google-cloud-project)
     - [1.2. Enabling the required APIs for GA4 and Google Sheets](#12-enabling-the-required-apis-for-ga4-and-google-sheets)
@@ -41,6 +40,7 @@ The aim of this project was to automate the monthly collection, transformation, 
     - [5.1. Creating a new task in Task Scheduler](#51-creating-a-new-task-in-task-scheduler)
     - [5.2. Configuring the task](#52-configuring-the-task)
 
+## Project workflow
 
 ### 1. Google Analytics 4 - Google Sheets pipeline
 
@@ -171,12 +171,12 @@ today = datetime.date.today()
 
 # Computing the first and last day of the previous month.
 first_day_last_month = (today.replace(day=1)
-						- datetime.timedelta(days=1)).replace(day=1)
+                        - datetime.timedelta(days=1)).replace(day=1)
 last_day_last_month = today.replace(day=1) - datetime.timedelta(days=1)
 
 # Formatting the month and year (e.g., "May 2024").
 month_and_year = (
-	f"{month_name[first_day_last_month.month]} {first_day_last_month.year}"
+    f"{month_name[first_day_last_month.month]} {first_day_last_month.year}"
 )
 ```
 
