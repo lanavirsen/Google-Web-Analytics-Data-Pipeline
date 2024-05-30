@@ -709,3 +709,12 @@ Initially, I encountered an issue with the task failing to run the script.
 After researching the error code online, I discovered that the problem was due to the use of quotation marks in the "Start in (optional)" field in the Action tab. While the "Program/script" and "Add arguments (optional)" fields accept quotation marks, the "Start in (optional)" field does not.
 
 After correcting this issue, the task executed as intended.
+
+### Conclusion
+
+This project successfully automated the collection, transformation, and presentation of web analytics data from Google Analytics 4 and Google Search Console into a Google Sheet. By documenting the steps, tools, and troubleshooting processes involved, this README aims to guide others through replicating or adapting this workflow for their own needs.
+
+Future enhancements could include adding more metrics, refining data visualization, or integrating with additional data sources.
+
+Thank you for taking the time to review this project.
+
