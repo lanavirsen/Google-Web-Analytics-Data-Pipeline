@@ -12,7 +12,7 @@ You can access the complete Python script for the project [here](https://github.
 - **Google Analytics Data API and Google Search Console API**: For accessing and retrieving web analytics data.
 - **Google Sheets API**: For loading and visualizing data in a user-friendly format.
 - **OAuth2.0**: For secure API authentication.
-- **Jupyter Notebook and Visual Code Studio**: For developing, testing, and documenting the code.
+- **Jupyter Notebook and Visual Studio Code**: For developing, testing, and documenting the code.
 
 ### Project outcomes
 - Enabled automated, timely, and error-free reporting of key web metrics, significantly reducing manual effort and enhancing the decision-making process.
