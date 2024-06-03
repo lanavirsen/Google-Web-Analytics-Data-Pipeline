@@ -225,11 +225,27 @@ def write_and_format_data(credentials, sheet_id, sheet_name, data):
         body=body
     ).execute()
 
+    # The "sheetId" used in Google Sheets API is a unique identifier
+    # assigned to each sheet within a spreadsheet. It is an integer that
+    # remains consistent for a sheet even if the order of sheets is changed
+    # within the spreadsheet.
+
+    # Retrieve the sheet ID for the given sheet name
+    spreadsheet = sheet_service.spreadsheets().get(
+        spreadsheetId=sheet_id
+    ).execute()
+    sheets = spreadsheet.get('sheets', [])
+    sheet_id_num = next(
+        sheet.get('properties', {}).get('sheetId') 
+        for sheet in sheets 
+        if sheet.get('properties', {}).get('title') == sheet_name
+    )
+
     # Defining a request to format the CTR (Click Through Rate) as a percentage.
     requests = [{
         'repeatCell': {
             'range': {
-                'sheetId': 0,  # ID of the sheet within the spreadsheet.
+                'sheetId': sheet_id_num,  # ID of the sheet.
                 'startRowIndex': next_row - 1,  # Starting at the current row.
                 'endRowIndex': next_row,  # Ending at the next row.
                 'startColumnIndex': 13,  # Starting at column N.
